@@ -12,6 +12,9 @@ fun printDuplicateChar(input: String) {
 }
 
 
+
+
+
 fun main() {
     printDuplicateChar("SandeepSa")
 }
