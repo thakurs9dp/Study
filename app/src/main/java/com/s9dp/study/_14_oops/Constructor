@@ -1,0 +1,13 @@
+1. Constructor is a block (Similar to method) having a same name as that of class name
+
+2. Constructor does not having any return type not even void.
+
+3. Only modifies applicable for constructor are public, protected , default and private.
+
+4. It execute automatically when create an object
+
+
+https://www.youtube.com/watch?v=9wZYkfnkW2c
+
+
+5 To perform the initialization the object properties tha is called constructor.

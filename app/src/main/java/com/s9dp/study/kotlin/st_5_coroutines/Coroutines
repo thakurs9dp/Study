@@ -1,0 +1,8 @@
+
+1. What are coroutines ?
+Ans : 1. Light Weight Threads.
+2. Like threads, Coroutines can run in parallel, wait for each other, and communicate with each other.
+3. Coroutines are very very Cheap - almost free.
+
+
+( When User Lunches the Application that time executed Main thread. If we need do some heavily operation such as File Download, Network calls , and Data base query )

@@ -1,0 +1,45 @@
+1. Polymorpizm  is the oops concept , Using polymorphism we can make multiple forms.
+
+This is 2 types
+1  Run time polymorphism and  Compile time polymorphism
+
+
+1. Overriding is the Run time polymorphism
+
+Same name
+different class
+Same Arguments
+
+2. Overloading is the Compile time Polymorphism
+
+Same name
+Same Class
+different Arguments
+
+
+Q. Can we overloading Same method but change Return type of method ?
+
+for example
+
+void show(Integer : a) {
+
+}
+
+int show(Integer : a) {
+}
+
+
+Answers : We can not use this it will shown the error in compile time
+
+
+Q. Can we overload java main method
+
+Ans : Yes we can make main method as overloading
+
+
+Q. Overriding method
+Which method cannot override ?
+1. Final method can not make be override
+2. Static method can not make overridden
+3. Private Method can not be override
+

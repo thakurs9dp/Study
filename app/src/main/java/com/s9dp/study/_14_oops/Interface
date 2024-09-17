@@ -1,0 +1,34 @@
+Interface method are by default public and abstract
+
+eg . interface client {
+
+    void run();
+    int a;
+
+}
+
+
+Interface variable are byDefault Public static final.
+
+
+Java 8 we can make concrete method
+
+
+using
+
+default void  display() {
+
+ }
+
+ we can make Static method also
+
+
+ static void run() {
+
+ }
+
+
+
+ In 9th version we can make Private Function also
+
+

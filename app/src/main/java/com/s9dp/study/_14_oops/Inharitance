@@ -1,0 +1,19 @@
+Inheritance is the Inheriting the properties of patient to child class is called Inheritance
+
+
+1. Single Inheritance
+2. Multilevel Inheritance
+3. Hieratical Inheritance
+
+
+Point Notes : Constructor is not inheritance , and Private modifiers not Inheritance
+
+
+Advantage Of Inharitance : Reusable Code
+
+Disadvantage : Titly Coupled (If we change in parent class that time we need to change the all sub class)
+
+
+The Parent Class is Object class and the Kotlin class is the Any
+
+

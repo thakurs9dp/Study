@@ -1,0 +1,44 @@
+The main difference between sealed classes and enum classes in Kotlin lies in their structure and use cases. Here's a breakdown of the differences:
+
+1. Purpose:
+Sealed Class: Used when you have a hierarchy of classes and each subclass can hold different types of data. It's helpful when each type needs its own specific properties and methods.
+Enum Class: Used when you have a fixed set of constants, all of which are instances of the same type. Enum values are typically used for simple states or constants.
+2. Flexibility:
+Sealed Class: Can have multiple subclasses with their own unique properties and behavior.
+Enum Class: Consists of a fixed set of constants (enum values) that share the same structure and behavior. Enum values are essentially predefined, unchangeable objects.
+3. Subclasses:
+Sealed Class: Allows subclassing. You can create classes that inherit from the sealed class, and each subclass can have its own properties.
+Enum Class: Does not support subclassing. All the enum values are instances of the enum class itself.
+4. Data Holding:
+Sealed Class: Can hold different types of data for each subclass. Each subclass can have its own properties and methods.
+Enum Class: Enum constants are typically single values, though they can hold simple data using constructor parameters, but all must share the same properties.
+5. When Expression:
+Sealed Class: Works well with a when expression, allowing you to handle each subclass separately, and it doesn't require an else clause because the compiler knows all possible subclasses.
+Enum Class: Works with a when expression as well, but it's just for handling the fixed set of enum values.
+Example Comparison:
+Sealed Class Example:
+kotlin
+Copy code
+sealed class Shape {
+    class Circle(val radius: Double) : Shape()
+    class Square(val side: Double) : Shape()
+    class Rectangle(val length: Double, val width: Double) : Shape()
+}
+Here, Circle, Square, and Rectangle are all subclasses of Shape, and each one holds different types of data.
+Enum Class Example:
+kotlin
+Copy code
+enum class Direction {
+    NORTH, SOUTH, EAST, WEST
+}
+Here, NORTH, SOUTH, EAST, and WEST are constants of the same type, and all share the same structure.
+When to Use:
+Sealed Class: Use it when you need a type hierarchy with various types of data or behaviors for each subclass.
+Enum Class: Use it when you have a fixed, predefined set of values (e.g., directions, states, days of the week) that don't need to hold complex data.
+Summary:
+Feature	Sealed Class	Enum Class
+Use Case	Hierarchy of related types	Fixed set of constant values
+Subclassing	Supports subclasses	Does not support subclasses
+Data Holding	Can have different properties per subclass	Same properties for all values
+When Expression	No else needed, subclasses handled individually	No else needed for enum values
+Flexibility	More flexible, complex data	Limited, simple constants

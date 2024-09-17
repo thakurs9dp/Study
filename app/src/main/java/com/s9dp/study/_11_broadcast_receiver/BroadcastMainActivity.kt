@@ -6,6 +6,8 @@ import android.content.IntentFilter
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.s9dp.study.R
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.launch
 
 class BroadcastMainActivity : AppCompatActivity() {
 
@@ -16,15 +18,19 @@ class BroadcastMainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_broadcast_main)
 
-        airplaneModeReceiver  = StaticBroadcastReceiver()
+        airplaneModeReceiver = StaticBroadcastReceiver()
 
         startStaticBroadCastReceiver()
+
+        MainScope().launch {
+            println("Hello")
+        }
 
     }
 
     override fun onDestroy() {
         super.onDestroy()
-       stopStaticBroadCastReceiver()
+        stopStaticBroadCastReceiver()
     }
 
 
@@ -41,9 +47,7 @@ class BroadcastMainActivity : AppCompatActivity() {
     private fun startCustomReceiver() {
 
 
-
     }
-
 
 
 }
